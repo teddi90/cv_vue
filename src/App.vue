@@ -1,113 +1,15 @@
 <script setup>
-import Header from "@/components/Header.vue";
+import HeaderApp from "@/components/HeaderApp.vue";
+import Hero from "@/components/Hero.vue";
+import About from "@/components/About.vue";
 </script>
 
 <template>
-  <Header/>
+  <HeaderApp/>
   <main class="main">
+    <Hero ref="home"/>
+    <About ref="about"/>
 
-    <!--=============== Home =================-->
-    <section class="home section" id="home">
-      <div class="container home__container">
-        <div class="home__data">
-          <span>Hello, I'm</span>
-          <h1>Oleg Slobodyan</h1>
-          <h3>Frontend Developer</h3>
-          <div class="home__buttons">
-            <a download="" href="@/assets/cv.pdf" class="btn btn__primery">
-              Download CV
-            </a>
-            <a href="#about" class="btn">About me</a>
-          </div>
-        </div>
-        <div class="home__handle">
-          <img src="@/assets/images/photo.jpg" alt="photo">
-        </div>
-        <div class="home__social">
-          <a href="https://linkedin.com/in/olegsloboydan" class="social__link" target="_blank">
-            <i class='bx bxl-linkedin-square'></i>
-          </a>
-          <a href="https://github.com/teddi90" class="social__link" target="_blank">
-            <i class='bx bxl-github'></i>
-          </a>
-          <a href="https://www.facebook.com/oleg510bodyan/" class="social__link" target="_blank">
-            <i class='bx bxl-facebook-square'></i>
-          </a>
-        </div>
-        <a href="#about" class="home__scroll">
-          <i class='bx bx-mouse'></i>
-          <span class="scroll__down">Scroll Down</span>
-        </a>
-      </div>
-    </section>
-
-    <!--=============== About =================-->
-    <section class="about section" id="about">
-      <span class="subtitle">My Intro</span>
-      <h2 class="title">About me</h2>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-lg-6">
-            <div class="about__img">
-              <img src="@/assets/images/photo2.jpg" alt="">
-            </div>
-          </div>
-          <div class="col-sm-12 col-lg-6">
-            <div class="row">
-              <div class="col-xs-6 col-lg-4">
-                <div class="info">
-                  <div class="info__img">
-                    <i class='bx bx-award'></i>
-                  </div>
-                  <h3 class="info__title">
-                    Expirience
-                  </h3>
-                  <span class="info__subtitle">
-                                        3 mounth
-                                    </span>
-                </div>
-              </div>
-              <div class="col-xs-6 col-lg-4">
-                <div class="info">
-                  <div class="info__img">
-                    <i class='bx bx-briefcase'></i>
-                  </div>
-                  <h3 class="info__title">
-                    Completed
-                  </h3>
-                  <span class="info__subtitle">
-                                        4 Projects
-                                    </span>
-                </div>
-              </div>
-              <div class="col-xs-6 col-lg-4">
-                <div class="info">
-                  <div class="info__img">
-                    <i class='bx bx-support'></i>
-                  </div>
-                  <h3 class="info__title">
-                    Support
-                  </h3>
-                  <span class="info__subtitle">
-                                        Online 24/7
-                                    </span>
-                </div>
-              </div>
-              <div class="col-xs-12">
-                <p class="text ta-c">
-                  Frontend develper from Ivano-Frankivsk. I create web pages with HTML, CSS and Java
-                  Script. I whoud like
-                  to develop website for you.
-                </p>
-                <div class="ta-c">
-                  <a href="#contact" class="btn">Contact me</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!--=============== Skills =================-->
     <section class="skills section" id="skills">

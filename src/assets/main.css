@@ -29,6 +29,7 @@ body{
   font-size: 16px;
   line-height: 1.44;
   font-style: normal;
+  scroll-behavior: smooth;
 }
 :root{
   --mainColor:#037274;
@@ -70,6 +71,9 @@ body{
 }
 .menu{
   backdrop-filter: blur(5px);
+}
+.footer{
+  background:url('https://loading.io/asset/732145');
 }
 
 ::-webkit-scrollbar {

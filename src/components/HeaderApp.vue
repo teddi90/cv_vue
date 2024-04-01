@@ -1,32 +1,41 @@
 <script setup>
-import {useDark,useToggle} from "@vueuse/core";
-import {onMounted, ref} from "vue";
-const currentSection=ref('home');
+import {useDark, useToggle} from "@vueuse/core";
+import {onMounted, onUnmounted, ref} from "vue";
+
+const currentSection = ref('home');
+const scrollY = ref(false);
 
 const isDark = useDark({
   selector: 'body',
   attribute: 'class',
 });
-const toggleTheme=useToggle(isDark);
-onMounted(()=>{
-    const observer=new IntersectionObserver((entries)=>{
-      entries.forEach(entry=>{
-        if(entry.intersectionRatio>0){
-          currentSection.value=entry.target.getAttribute('id')
-        }
-      });
-    })
-  document.querySelectorAll('section').forEach(section=>{
-    observer.observe(section);
-  })
-})
+const toggleTheme = useToggle(isDark);
+
+onMounted(() => {
+  const allSections = document.querySelectorAll("section");
+  window.addEventListener("scroll", () => {
+    scrollY.value = window.scrollY >= 50;
+
+    allSections.forEach((section) => {
+      if (window.scrollY >= section.offsetTop - 120) {
+        currentSection.value = section.id;
+      }
+    });
+  });
+});
+onUnmounted(() => {
+  window.removeEventListener("scroll");
+});
 </script>
 
 <template>
-  <header class="bg-white py-2 fixed top-0 left-0 w-[100%] z-[99] dark:bg-black" id="header">
+  <header class="bg-white py-2 fixed top-0 left-0 w-[100%] z-[99] dark:bg-black"
+          :class="[scrollY? 'shadow-md' : '']"
+          id="header">
     <div class="container mx-auto">
       <nav class="flex items-center justify-between">
-        <a href="#skills" class="flex items-center dark:text-white hover:text-mainColor hover:dark:text-mainColor transition-colors duration-300 ease-in-out">
+        <a href="#skills"
+           class="flex items-center dark:text-white hover:text-mainColor hover:dark:text-mainColor transition-colors duration-300 ease-in-out">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                stroke="currentColor" class="w-7 h-7 inline-block mr-1">
             <path stroke-linecap="round" stroke-linejoin="round"
@@ -34,10 +43,12 @@ onMounted(()=>{
           </svg>
           <span class="font-bold">frontend_developer</span>
         </a>
-        <div class="menu shadow-xl fixed w-[300px] bottom-[20px] left-0 right-0 bg-gray-300 bg-opacity-20 dark:bg-white dark:bg-opacity-20  px-[25px] py-[15px] rounded-[40px] mx-auto">
+        <div
+            class="menu shadow-xl fixed w-[300px] bottom-[20px] left-0 right-0 bg-gray-300 bg-opacity-20 dark:bg-white dark:bg-opacity-20  px-[25px] py-[15px] rounded-[40px] mx-auto">
           <ul class="flex justify-between">
             <li>
-              <a href="#home" class="dark:text-white flex items-center p-[7px] rounded-full" :class="[currentSection==='home' ? 'shadow-black bg-mainColor text-white':'']">
+              <a href="#home" class="dark:text-white flex items-center p-[7px] rounded-full"
+                 :class="[currentSection==='home' ? 'shadow-black bg-mainColor text-white':'']">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                      stroke="currentColor" class="w-6 h-6 ">
                   <path stroke-linecap="round" stroke-linejoin="round"
@@ -46,7 +57,8 @@ onMounted(()=>{
               </a>
             </li>
             <li>
-              <a href="#about" class="dark:text-white flex items-center p-[7px] rounded-full" :class="[currentSection==='about' ? 'shadow-black bg-mainColor text-white':'']">
+              <a href="#about" class="dark:text-white flex items-center p-[7px] rounded-full"
+                 :class="[currentSection==='about' ? 'shadow-black bg-mainColor text-white':'']">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                      stroke="currentColor" class="w-6 h-6">
                   <path stroke-linecap="round" stroke-linejoin="round"
@@ -55,7 +67,8 @@ onMounted(()=>{
               </a>
             </li>
             <li>
-              <a href="#skills" class="dark:text-white flex items-center p-[7px] rounded-full" :class="[currentSection==='skills' ? 'shadow-black bg-mainColor text-white':'']">
+              <a href="#skills" class="dark:text-white flex items-center p-[7px] rounded-full"
+                 :class="[currentSection==='skills' ? 'shadow-black bg-mainColor text-white':'']">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                      stroke="currentColor" class="w-6 h-6">
                   <path stroke-linecap="round" stroke-linejoin="round"
@@ -64,7 +77,8 @@ onMounted(()=>{
               </a>
             </li>
             <li>
-              <a href="#work" class="dark:text-white flex items-center p-[7px] rounded-full" :class="[currentSection==='work' ? 'shadow-black bg-mainColor text-white':'']">
+              <a href="#work" class="dark:text-white flex items-center p-[7px] rounded-full"
+                 :class="[currentSection==='work' ? 'shadow-black bg-mainColor text-white':'']">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                      stroke="currentColor" class="w-6 h-6">
                   <path stroke-linecap="round" stroke-linejoin="round"
@@ -73,7 +87,8 @@ onMounted(()=>{
               </a>
             </li>
             <li>
-              <a href="#contact" class="dark:text-white flex items-center p-[7px] rounded-full" :class="[currentSection==='contact' ? 'shadow-black bg-mainColor text-white':'']">
+              <a href="#contact" class="dark:text-white flex items-center p-[7px] rounded-full"
+                 :class="[currentSection==='contact' ? 'shadow-black bg-mainColor text-white':'']">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                      stroke="currentColor" class="w-[22px] h-[22px]">
                   <path stroke-linecap="round" stroke-linejoin="round"
@@ -84,17 +99,9 @@ onMounted(()=>{
           </ul>
         </div>
         <button @click="toggleTheme()"
-                class="bg-transparent border-0 hover:text-mainColor transition-colors duration-300 ease-in-out">
-          <svg v-if="isDark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-               stroke="currentColor" class="w-5 h-5 text-white">
-            <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"/>
-          </svg>
-          <svg v-else xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-               stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-light hover:dark:text-mainColor">
-            <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"/>
-          </svg>
+                class="bg-transparent border-0 ">
+          <font-awesome-icon v-if="isDark" :icon="['far', 'sun']" class="w-5 h-5 text-white hover:text-mainColor transition-colors duration-300 ease-in-out"/>
+          <font-awesome-icon v-else :icon="['far', 'moon']" class="w-5 h-5 text-black hover:text-mainColor transition-colors duration-300 ease-in-out"/>
         </button>
       </nav>
     </div>

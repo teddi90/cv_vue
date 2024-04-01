@@ -1,45 +1,46 @@
 <script setup>
 
+import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 </script>
 
 <template>
-  <section class="contact section" id="contact">
+  <section class="dark:bg-black py-[120px]" id="contact">
     <span class="subtitle">Get in touch</span>
     <h2 class="title">Conatct Me</h2>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12 col-lg-6">
-          <div class="contact__content">
-            <h3 class="contact__title">Talk to me</h3>
-            <div class="contact__info">
-              <div class="contact__card">
-                <i class='bx bx-mail-send contact__card-icon'></i>
-                <h3 class="contact__card-title">Email</h3>
-                <span class="contact__card-data">slobodyanoleg5@gmail.com</span>
-                <a href="mailto:slobodyanoleg5@gmail.com" target="_blank" class="contact__card-btn">
-                  Write me <i class='bx bx-right-arrow-alt contact__btn-icon'></i>
-                </a>
-              </div>
-              <div class="contact__card">
-                <i class='bx bxl-messenger contact__card-icon'></i>
-                <h3 class="contact__card-title">Messenger</h3>
-                <span class="contact__card-data">oleg510bodyan</span>
-                <a href="http://m.me/oleg510bodyan" target="_blank" class="contact__card-btn">
-                  Write me <i class='bx bx-right-arrow-alt contact__btn-icon'></i>
-                </a>
-              </div>
-              <div class="contact__card">
-                <i class='bx bxl-telegram contact__card-icon'></i>
-                <h3 class="contact__card-title">Telegram</h3>
-                <span class="contact__card-data">@teddi90</span>
-                <a href="http://t.me/teddi90" target="_blank" class="contact__card-btn">
-                  Write me <i class='bx bx-right-arrow-alt contact__btn-icon'></i>
-                </a>
-              </div>
+    <div class="container mx-auto">
+      <div class="flex">
+        <div class="flex-1 flex justify-center">
+          <div class="flex flex-col">
+            <h3 class="text-lg font-semibold text-center mb-5 dark:text-white">Have questions or propositions?</h3>
+            <div class="flex space-x-5">
+              <a href="mailto:slobodyanoleg5@gmail.com" target="_blank"
+                  class="flex group flex-col justify-center w-[150px] items-center p-5 shadow-xl rounded-lg hover:shadow-black transition ease-in duration-300 dark:bg-darkBG">
+                <font-awesome-icon :icon="['fas', 'at']" class="w-7 h-7 mb-1 dark:text-white group-hover:text-orange-600 transition ease-in duration-300" />
+                <h3 class="font-semibold dark:text-white mb-1">Gmail</h3>
+                <span class="text-xs dark:text-white">
+                  Write me
+                </span>
+              </a>
+              <a href="http://m.me/oleg510bodyan" target="_blank"
+                 class="flex group flex-col justify-center w-[150px] items-center p-5 shadow-xl rounded-lg hover:shadow-black transition ease-in duration-300 dark:bg-darkBG">
+                <font-awesome-icon :icon="['fab', 'facebook-messenger']" class="w-7 h-7 mb-1 dark:text-white group-hover:text-[#006AFF] transition ease-in duration-300" />
+                <h3 class="font-semibold dark:text-white mb-1">Messenger</h3>
+                <span class="text-xs dark:text-white">
+                  Write me
+                </span>
+              </a>
+              <a href="https://t.me/teddi90" target="_blank"
+                 class="flex group flex-col justify-center w-[150px] items-center p-5 shadow-xl rounded-lg hover:shadow-black transition ease-in duration-300 dark:bg-darkBG">
+                <font-awesome-icon :icon="['fab', 'telegram']" class="w-7 h-7 mb-1 dark:text-white group-hover:text-[#0088cc] transition ease-in duration-300" />
+                <h3 class="font-semibold dark:text-white mb-1">Telegram</h3>
+                <span class="text-xs dark:text-white">
+                  Write me
+                </span>
+              </a>
             </div>
           </div>
         </div>
-        <div class="col-sm-12 col-lg-6">
+        <div class="flex-1">
           <div class="contact__content">
             <h3 class="contact__title">Write me your project</h3>
             <form action="https://formspree.io/f/xqknyzpo" method="POST" class="contact__form">

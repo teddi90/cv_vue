@@ -41,7 +41,7 @@ import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
           </div>
         </div>
         <div class="flex-1">
-          <div class="contact__content">
+          <div class="rounded-xl shadow-xl py-[30px] px-[20px]">
             <h3 class="contact__title">Write me your project</h3>
             <form action="https://formspree.io/f/xqknyzpo" method="POST" class="contact__form">
               <div class="contact__form-div">

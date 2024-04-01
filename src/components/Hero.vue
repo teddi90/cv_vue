@@ -36,7 +36,7 @@
         </div>
         <img class="h-[250px] w-[250px] rounded-full" src="@/assets/images/photo.jpg" alt="photo">
         <div class="flex flex-col">
-          <a href="#about" class="relative mt-20 group p-[7px] rounded-full shadow-black mb-2 hover:bg-mainColor dark:bg-white dark:hover:bg-mainColor transition duration-500 ease-in-out">
+          <a href="#about" class="relative flex items-center mt-20 group p-[7px] rounded-full shadow-black mb-2 hover:bg-mainColor dark:bg-white dark:hover:bg-mainColor transition duration-500 ease-in-out">
             <font-awesome-icon :icon="['fas', 'computer-mouse']" class="h-5 w-5 group-hover:text-white transition duration-500 ease-in-out"/>
             <span class="absolute rotate-90 w-[100px] font-semibold -left-[33px] top-[87px] dark:text-white group-hover:text-mainColor transition duration-500 ease-in-out">Scroll Down</span>
           </a>

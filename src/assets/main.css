@@ -23,13 +23,15 @@
   font-weight: 600;
   src: url('@/assets/fonts/poppins-v19-latin-600.woff2') format('woff2');
 }
+html {
+  scroll-behavior: smooth;
+}
 body{
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.44;
   font-style: normal;
-  scroll-behavior: smooth;
 }
 :root{
   --mainColor:#037274;

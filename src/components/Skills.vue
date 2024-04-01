@@ -9,7 +9,7 @@
     <div class="container mx-auto">
       <div class="flex justify-center">
         <div class="rounded-xl dark:bg-darkBG shadow-xl py-10 px-14">
-          <h3 class="font-semibold text-xl mb-5 dark:text-white text-center">Frontend developer</h3>
+          <h3 class="font-semibold text-xl mb-5 dark:text-white text-center">Hard Skills</h3>
           <div class="flex justify-between space-x-40">
             <div>
               <div class="flex items-center mb-2">

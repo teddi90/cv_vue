@@ -3,95 +3,247 @@
 @tailwind utilities;
 
 @font-face {
-  font-display: swap;
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 400;
-  src: url('@/assets/fonts/poppins-v19-latin-regular.woff2') format('woff2');
+    font-display: swap;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('@/assets/fonts/poppins-v19-latin-regular.woff2') format('woff2');
 }
+
 @font-face {
-  font-display: swap;
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 500;
-  src: url('@/assets/fonts/poppins-v19-latin-500.woff2') format('woff2');
+    font-display: swap;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    src: url('@/assets/fonts/poppins-v19-latin-500.woff2') format('woff2');
 }
+
 @font-face {
-  font-display: swap;
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 600;
-  src: url('@/assets/fonts/poppins-v19-latin-600.woff2') format('woff2');
+    font-display: swap;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    src: url('@/assets/fonts/poppins-v19-latin-600.woff2') format('woff2');
 }
+
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
-body{
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.44;
-  font-style: normal;
+
+body {
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.44;
+    font-style: normal;
 }
-:root{
-  --mainColor:#037274;
-  --mainColorDarker: #046062;
-  --darkBG: rgba(255, 254, 254, 0.15);
+
+:root {
+    --mainColor: #037274;
+    --mainColorDarker: #046062;
+    --darkBG: rgba(255, 254, 254, 0.15);
 }
 
 @layer components {
-  .btn {
-    background-color: theme('colors.mainColor');
-    border-radius: theme('borderRadius.lg');
-    padding: theme('padding.3') theme('padding.4');
-    color: theme('textColor.white');
-    transition: theme('transitionProperty.all') theme('transitionTimingFunction.linear') theme('transitionDelay.300');
-  }
-  .btn:hover{
-    background-color: theme('colors.mainColorDarker');
-  }
-  .btn__primary{
-    border-radius: theme('borderRadius.lg');
-    padding: theme('padding.3') theme('padding.4');
-    border-width:theme('borderWidth.2');
-    border-color:theme('borderColor.mainColor');
-    color: theme('textColor.mainColor');
-    transition: theme('transitionProperty.all') theme('transitionTimingFunction.linear') theme('transitionDelay.300');
-  }
-  .btn__primary:hover{
-    background-color: theme('colors.mainColorDarker');
-    border-color:theme('borderColor.mainColorDarker');
-    color: theme('textColor.white');
-  }
+    .btn {
+        background-color: theme('colors.mainColor');
+        border-radius: theme('borderRadius.lg');
+        padding: theme('padding.3') theme('padding.4');
+        color: theme('textColor.white');
+        transition: theme('transitionProperty.all') theme('transitionTimingFunction.linear') theme('transitionDelay.300');
+    }
+
+    .btn:hover {
+        background-color: theme('colors.mainColorDarker');
+    }
+
+    .btn__primary {
+        border-radius: theme('borderRadius.lg');
+        padding: theme('padding.3') theme('padding.4');
+        border-width: theme('borderWidth.2');
+        border-color: theme('borderColor.mainColor');
+        color: theme('textColor.mainColor');
+        transition: theme('transitionProperty.all') theme('transitionTimingFunction.linear') theme('transitionDelay.300');
+    }
+
+    .btn__primary:hover {
+        background-color: theme('colors.mainColorDarker');
+        border-color: theme('borderColor.mainColorDarker');
+        color: theme('textColor.white');
+    }
 
 }
-.title{
-  @apply text-center text-[26px] text-mainColor font-semibold mb-[50px];
+
+.title {
+    @apply text-center text-[26px] text-mainColor font-semibold mb-[50px];
 }
-.subtitle{
-  @apply block text-center text-[15px] dark:text-white;
+
+.subtitle {
+    @apply block text-center text-[15px] dark:text-white;
 }
-.menu{
-  backdrop-filter: blur(5px);
+
+.menu {
+    backdrop-filter: blur(5px);
 }
-.footer{
-  background:url('https://loading.io/asset/732145');
+
+.input {
+    color: #333;
+    width: 100%;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    border: 0;
+    padding: 4px 0;
+    border-bottom: 1px solid #ccc;
+    background-color: transparent;
+    @apply dark:text-white
+}
+
+.input:focus {
+    outline: none;
+}
+.input ~ .focus-border {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--mainColor);
+    transition: 0.4s;
+}
+
+.input:focus ~ .focus-border,
+.has-content.input ~ .focus-border {
+    width: 100%;
+    transition: 0.4s;
+    left: 0;
+}
+
+.input ~ .label {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 9px;
+    color: #aaa;
+    transition: 0.3s;
+    z-index: -1;
+    letter-spacing: 0.5px;
+}
+
+.input:focus ~ .label, .has-content.input ~ .label {
+    top: -16px;
+    font-size: 12px;
+    color: var(--mainColor);
+    transition: 0.3s;
+}
+
+/*textarea*/
+.textarea {
+    font: 15px / 24px "Lato", Arial, sans-serif;
+    color: #333;
+    width: 100%;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    @apply dark:text-white
+}
+
+:focus {
+    outline: none;
+}
+
+.textarea {
+    border: 1px solid #ccc;
+    padding: 7px 14px;
+    transition: 0.4s;
+    background: transparent;
+}
+
+.textarea ~ .focus-border:before,
+.textarea ~ .focus-border:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--mainColor);
+    transition: 0.3s;
+}
+
+.textarea ~ .focus-border:after {
+    top: auto;
+    bottom: 6px;
+    left: auto;
+    right: 0;
+}
+
+.textarea ~ .focus-border i:before,
+.textarea ~ .focus-border i:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 0;
+    background-color: var(--mainColor);
+    transition: 0.4s;
+}
+
+.textarea ~ .focus-border i:after {
+    left: auto;
+    right: 0;
+    top: auto;
+    bottom: 6px;
+}
+
+.textarea:focus ~ .focus-border:before,
+.textarea:focus ~ .focus-border:after,
+.has-content.textarea ~ .focus-border:before,
+.has-content.textarea ~ .focus-border:after {
+    width: 100%;
+    transition: 0.3s;
+}
+
+.textarea:focus ~ .focus-border i:before,
+.textarea:focus ~ .focus-border i:after,
+.has-content.textarea ~ .focus-border i:before,
+.has-content.textarea ~ .focus-border i:after {
+    height: 96%;
+    transition: 0.4s;
+}
+
+.textarea ~ label {
+    position: absolute;
+    left: 14px;
+    width: 100%;
+    top: 10px;
+    color: #aaa;
+    transition: 0.3s;
+    z-index: -1;
+    letter-spacing: 0.5px;
+}
+
+.textarea:focus ~ label, .has-content.textarea ~ label {
+    top: -18px;
+    left: 0;
+    font-size: 12px;
+    color: var(--mainColor);
+    transition: 0.3s;
 }
 
 ::-webkit-scrollbar {
-  width: 12px;
-  background-color: #dcdcdc;
+    width: 12px;
+    background-color: #dcdcdc;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--mainColor);
-  border-radius: 8px;
+    background-color: var(--mainColor);
+    border-radius: 8px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--mainColorDarker);
+    background-color: var(--mainColorDarker);
 }
 
 .dark::-webkit-scrollbar {
-  background-color: #949494;
+    background-color: #949494;
 }

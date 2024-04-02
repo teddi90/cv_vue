@@ -1,15 +1,10 @@
 <script setup>
-import {useDark, useToggle} from "@vueuse/core";
 import {onMounted, onUnmounted, ref} from "vue";
+import {useSVStore} from "@/stores/cv.js";
 
+const store=useSVStore();
 const currentSection = ref('home');
 const scrollY = ref(false);
-
-const isDark = useDark({
-  selector: 'body',
-  attribute: 'class',
-});
-const toggleTheme = useToggle(isDark);
 
 onMounted(() => {
   const allSections = document.querySelectorAll("section");
@@ -98,9 +93,9 @@ onUnmounted(() => {
             </li>
           </ul>
         </div>
-        <button @click="toggleTheme()"
+        <button @click="store.toggleTheme()"
                 class="bg-transparent border-0 ">
-          <font-awesome-icon v-if="isDark" :icon="['far', 'sun']" class="w-5 h-5 text-white hover:text-mainColor transition-colors duration-300 ease-in-out"/>
+          <font-awesome-icon v-if="store.isDark" :icon="['far', 'sun']" class="w-5 h-5 text-white hover:text-mainColor transition-colors duration-300 ease-in-out"/>
           <font-awesome-icon v-else :icon="['far', 'moon']" class="w-5 h-5 text-black hover:text-mainColor transition-colors duration-300 ease-in-out"/>
         </button>
       </nav>

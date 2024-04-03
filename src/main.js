@@ -6,6 +6,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import Vue3Toasity from 'vue3-toastify';
 import 'vue3-toastify/dist/index.css';
+import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 
 library.add(fas,fab,far)
 dom.watch();
@@ -17,10 +18,12 @@ import App from './App.vue'
 import router from './router'
 
 
-const app = createApp(App)
+const app = createApp(App);
+const pinia = createPinia();
+pinia.use(piniaPluginPersistedstate);
 
 app.component("font-awesome-icon", FontAwesomeIcon)
-app.use(createPinia())
+app.use(pinia)
 app.use(router)
 app.use(Vue3Toasity)
 app.mount('#app')

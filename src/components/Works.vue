@@ -3,16 +3,16 @@ import {useSVStore} from "@/stores/cv.js";
 import {computed, ref} from "vue";
 
 const store = useSVStore();
-const filterSelect=ref('all');
-const setFilter=(value)=>{
-  filterSelect.value=value;
+const filterSelect = ref('all');
+const setFilter = (value) => {
+  filterSelect.value = value;
 }
-const filteredWorks=computed(()=>{
-  if(filterSelect.value==='all'){
+const filteredWorks = computed(() => {
+  if (filterSelect.value === 'all') {
     return store.works;
-  }else if(filterSelect.value==='frontend'){
+  } else if (filterSelect.value === 'frontend') {
     return store.getFrontendWorks();
-  }else if(filterSelect.value==='fullstack'){
+  } else if (filterSelect.value === 'fullstack') {
     return store.getFullstackWorks();
   }
 })
@@ -28,33 +28,40 @@ const filteredWorks=computed(()=>{
                 type="button"
                 class="py-1 px-2 rounded-lg dark:text-white"
                 :class="[filterSelect==='all'? 'bg-mainColor text-white' : '']"
-        >All</button>
+        >All
+        </button>
         <button @click="setFilter('frontend')"
                 type="button"
                 class="py-1 px-2 rounded-lg dark:text-white"
                 :class="[filterSelect==='frontend'? 'bg-mainColor text-white' : '']"
-        >Frontend</button>
+        >Frontend
+        </button>
         <button @click="setFilter('fullstack')"
                 type="button"
                 class="py-1 px-2 rounded-lg dark:text-white"
                 :class="[filterSelect==='fullstack'? 'bg-mainColor text-white' : '']"
-        >Fullstack</button>
+        >Fullstack
+        </button>
         <button @click="setFilter('pet_projects')"
                 type="button"
                 class="py-1 px-2 rounded-lg dark:text-white"
                 :class="[filterSelect==='pet_projects'? 'bg-mainColor text-white' : '']"
-        >Pet projects</button>
+        >Pet projects
+        </button>
       </div>
       <div class="grid grid-cols-3 gap-9">
         <template v-for="work in filteredWorks" :key="work.id">
           <div
               class="group shadow-xl rounded-lg p-4 hover:shadow-black transition duration-300 ease-out dark:bg-darkBG">
             <div class="mb-2 relative pt-[70%] overflow-hidden">
-              <img :src="'src/assets/images/'+work.image" :alt="work.name"
+              <img :src="'/src/assets/images/'+work.image" :alt="work.name"
                    class="absolute top-0 left-[50%] min-w-[100%] min-h-[100%] -translate-x-[50%] group-hover:scale-[1.3] transition duration-300 ease-out">
             </div>
-            <h3 class="font-semibold mb-1 dark:text-white">{{ work.name }}</h3>
-            <a :href="work.link" target="_blank" class="flex items-center group/link hover:text-mainColor dark:text-white">
+            <RouterLink :to="{name:'work', params:{id:work.id}}" class="font-semibold mb-1 dark:text-white">
+              {{work.name}}
+            </RouterLink>
+            <a :href="work.link" target="_blank"
+               class="flex items-center group/link hover:text-mainColor dark:text-white">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                    stroke="currentColor" class="w-5 h-5 mr-1 group-hover/link:animate-spin">
                 <path stroke-linecap="round" stroke-linejoin="round"

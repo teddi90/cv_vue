@@ -7,7 +7,10 @@ export  default {
             name:'Mdesign',
             image:'qoob.jpg',
             description:'asdasd asdsd',
-            link:'https://qoobdesign.com.ua/'
+            link:'https://teddi90.github.io/mdesign/',
+            year:'2018',
+            project_link:'https://github.com/teddi90/mdesign',
+            technologies:['HTML', 'CSS', 'SCSS', 'Jquery','JavaScript'],
         },
         {
             id:uuidv4(),
@@ -15,7 +18,9 @@ export  default {
             name:'Bird',
             image:'bird.jpg',
             description:'asdasd asdsd',
-            link:'https://qoobdesign.com.ua/'
+            link:'https://qoobdesign.com.ua/',
+            technologies:['HTML', 'CSS', 'SCSS', 'Jquery','JavaScript'],
+
         },
         {
             id:uuidv4(),
@@ -23,7 +28,9 @@ export  default {
             name:'Shop',
             image:'divorce.jpg',
             description:'asdasd asdsd',
-            link:'https://qoobdesign.com.ua/'
+            link:'https://qoobdesign.com.ua/',
+            technologies:['HTML', 'CSS', 'SCSS', 'Jquery','JavaScript'],
+
         },
 
     ]

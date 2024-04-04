@@ -57,11 +57,11 @@ const filteredWorks = computed(() => {
               <img :src="'/src/assets/images/'+work.image" :alt="work.name"
                    class="absolute top-0 left-[50%] min-w-[100%] min-h-[100%] -translate-x-[50%] group-hover:scale-[1.3] transition duration-300 ease-out">
             </div>
-            <RouterLink :to="{name:'work', params:{id:work.id}}" class="font-semibold mb-1 dark:text-white">
+            <RouterLink :to="{name:'work', params:{id:work.id}}" class="block font-semibold mb-1 dark:text-white hover:text-mainColorDarker transition duration-300 ease-out">
               {{work.name}}
             </RouterLink>
             <a :href="work.link" target="_blank"
-               class="flex items-center group/link hover:text-mainColor dark:text-white">
+               class="flex items-center group/link hover:text-mainColor dark:text-white transition duration-300 ease-out">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                    stroke="currentColor" class="w-5 h-5 mr-1 group-hover/link:animate-spin">
                 <path stroke-linecap="round" stroke-linejoin="round"

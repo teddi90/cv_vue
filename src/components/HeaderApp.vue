@@ -1,5 +1,5 @@
 <script setup>
-import {computed, onMounted, ref} from "vue";
+import {computed, onMounted, onUnmounted, ref} from "vue";
 import {useSVStore} from "@/stores/cv.js";
 import {useRouter} from "vue-router";
 
@@ -11,19 +11,23 @@ const isHomePage=computed(()=>{
   return router.currentRoute.value.name==='home'
 })
 
-
-onMounted(() => {
+const watchScroll=() => {
   const allSections = document.querySelectorAll("section");
-  window.addEventListener("scroll", () => {
-    scrollY.value = window.scrollY >= 50;
+  scrollY.value = window.scrollY >= 50;
 
-    allSections.forEach((section) => {
-      if (window.scrollY >= section.offsetTop - 120) {
-        currentSection.value = section.id;
-      }
-    });
+  allSections.forEach((section) => {
+    if (window.scrollY >= section.offsetTop - 120) {
+      currentSection.value = section.id;
+    }
   });
+}
+onMounted(() => {
+
+  window.addEventListener("scroll",watchScroll );
 });
+onUnmounted(()=>{
+  window.removeEventListener("scroll",watchScroll );
+})
 </script>
 
 <template>

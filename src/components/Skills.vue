@@ -116,42 +116,76 @@
           </div>
         </div>
       </div>
-      <h3 class="font-bold text-xl text-center mb-8">Education</h3>
+      <h3 class="font-bold text-xl text-center mb-8 dark:text-white">Job</h3>
       <div class="grid grid-cols-2 mb-8">
-        <div class="flex justify-end">
-          <div class="work-card work-card_left">
-            <h4 class="font-semibold mb-1">GRT</h4>
-            <h5 class="text-sm mb-4">Frontend developer Vue</h5>
-            <p class="italic text-sm"> Lorem impsum adolores skdome other text about my work and experience at company</p>
+        <div class="group flex justify-end">
+          <div class="work-card work-card_left  work-card_left_start">
+            <div class="flex justify-between">
+              <h4 class="font-semibold mb-1">GRT</h4>
+              <span class="dark:text-white text-gray-500 opacity-0 text-xs group-hover:opacity-100 transition ease-in-out duration-300">2023 - Now</span>
+            </div>
+            <h5 class="text-sm mb-4 group-hover:text-mainColorDarker transition ease-in-out duration-300">Frontend developer Vue</h5>
+            <p class="italic text-sm"> Worked with technologies like Vue3, Nuxt3 and WordPress. Worked on a project that used Nuxt/WordPress headless technology although created a Woocomerce website and SPA with Vue3</p>
           </div>
         </div>
         <div></div>
         <div></div>
-        <div class="flex">
-          <div class="work-card work-card_right">
-            <h4 class="font-semibold mb-1">GRT</h4>
-            <h5 class="text-sm mb-4">Frontend developer Vue</h5>
-            <p class="italic text-sm"> Lorem impsum adolores skdome other text about my work and experience at company</p>
+        <div class="flex group">
+          <div class="work-card work-card_right work-card_right_end">
+            <div class=" flex justify-between">
+              <h4 class="font-semibold mb-1">Freelance</h4>
+              <span class="dark:text-white text-gray-500 opacity-0 text-xs group-hover:opacity-100 transition ease-in-out duration-300">2018 (6 months)</span>
+            </div>
+            <h5 class="text-sm mb-4 group-hover:text-mainColorDarker transition ease-in-out duration-300">Frontend developer HTML/CSS/ jQuery</h5>
+            <p class="italic text-sm">Created landing pages with simple animation</p>
           </div>
         </div>
       </div>
 
-      <h3 class="font-bold text-xl text-center mb-8">Education</h3>
+      <h3 class="font-bold text-xl text-center mb-8 dark:text-white">Education</h3>
       <div class="grid grid-cols-2">
-        <div class="flex justify-end">
-          <div class="work-card work-card_left">
-            <h4 class="font-semibold mb-1">GRT</h4>
-            <h5 class="text-sm mb-4">Frontend developer Vue</h5>
-            <p class="italic text-sm"> Lorem impsum adolores skdome other text about my work and experience at company</p>
+        <div class="group flex justify-end">
+          <div class="work-card work-card_left  work-card_left_start">
+            <div class="flex justify-between">
+              <h4 class="font-semibold mb-1">English courses at the Profi Center</h4>
+              <span class="dark:text-white text-gray-500 opacity-0 text-xs group-hover:opacity-100 transition ease-in-out duration-300">2023 (5 months)</span>
+            </div>
+            <h5 class="text-sm mb-4 group-hover:text-mainColorDarker transition ease-in-out duration-300">Learning English by the Kallan method</h5>
+            <p class="italic text-sm"> Finished stage 6 of 12</p>
           </div>
         </div>
         <div></div>
         <div></div>
-        <div class="flex">
+        <div class="flex group">
           <div class="work-card work-card_right">
-            <h4 class="font-semibold mb-1">GRT</h4>
-            <h5 class="text-sm mb-4">Frontend developer Vue</h5>
-            <p class="italic text-sm"> Lorem impsum adolores skdome other text about my work and experience at company</p>
+            <div class=" flex justify-between">
+              <h4 class="font-semibold mb-1">Beetroot Academy</h4>
+              <span class="dark:text-white text-gray-500 opacity-0 text-xs group-hover:opacity-100 transition ease-in-out duration-300">2022 (6 months)</span>
+            </div>
+            <h5 class="text-sm mb-4 group-hover:text-mainColorDarker transition ease-in-out duration-300">Courses frontend developer</h5>
+            <p class="italic text-sm">Successfully completed the course and received a certificate. During the course, I acquired basic knowledge of HTML, CSS, SCSS, JavaScript, BEM, Vue3, Figma</p>
+          </div>
+        </div>
+        <div class="group flex justify-end">
+          <div class="work-card work-card_left">
+            <div class="flex justify-between">
+              <h4 class="font-semibold mb-1">English courses at the Canadian business center</h4>
+              <span class="dark:text-white text-gray-500 opacity-0 text-xs group-hover:opacity-100 transition ease-in-out duration-300">2018 (3 months)</span>
+            </div>
+            <h5 class="text-sm mb-4 group-hover:text-mainColorDarker transition ease-in-out duration-300">English conversation course</h5>
+            <p class="italic text-sm"> Improved my spoken English</p>
+          </div>
+        </div>
+        <div></div>
+        <div></div>
+        <div class="flex group">
+          <div class="work-card work-card_right work-card_right_end">
+            <div class=" flex justify-between">
+              <h4 class="font-semibold mb-1">Ivano Frankivsk National Technical University of Oil and Gas</h4>
+              <span class="dark:text-white text-gray-500 opacity-0 text-xs group-hover:opacity-100 transition ease-in-out duration-300">2007-2012</span>
+            </div>
+            <h5 class="text-sm mb-4 group-hover:text-mainColorDarker transition ease-in-out duration-300">Computer systems and networks</h5>
+            <p class="italic text-sm"> Graduated from the university with a Specialist diploma</p>
           </div>
         </div>
       </div>

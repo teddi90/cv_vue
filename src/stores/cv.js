@@ -21,10 +21,15 @@ export const useSVStore = defineStore('cv', () => {
       return work.type==='fullstack';
     });
   };
+  const getPetProjectWorks=()=>{
+    return works.value.filter(work=>{
+      return work.type==='pet_project';
+    });
+  };
   const getWorkById=(id)=>{
     work.value= works.value.find(work=>work.id===id);
   }
-  return { works,work, isDark, getFrontendWorks, getFullstackWorks,toggleTheme, getWorkById }
+  return { works,work, isDark, getFrontendWorks, getFullstackWorks,getPetProjectWorks,toggleTheme, getWorkById }
 },{
   persist: true
 })

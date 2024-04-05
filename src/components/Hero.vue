@@ -10,7 +10,7 @@
         <h1 class="text-3xl font-bold mb-5">Oleg Slobodyan</h1>
         <h3 class="text-xl mb-[40px] font-bold">Frontend Developer</h3>
         <div class="mb-[70px]">
-          <a download href="@/assets/cv.pdf" class="btn__primary mr-6">
+          <a href="/src/assets/cv_frontend_vue_slobodyan.pdf" download="frontend_vue_slobodyan" class="btn__primary mr-6">
             Download CV
           </a>
           <a href="#about" class="btn">About me</a>
@@ -45,7 +45,3 @@
     </div>
   </section>
 </template>
-
-<style scoped>
-
-</style>

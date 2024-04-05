@@ -2,9 +2,9 @@
 import {useRouter} from "vue-router";
 import {computed} from "vue";
 
-const router=useRouter();
-const isHomePage=computed(()=>{
-  return router.currentRoute.value.name==='home'
+const router = useRouter();
+const isHomePage = computed(() => {
+  return router.currentRoute.value.name === 'home'
 })
 </script>
 
@@ -19,27 +19,36 @@ const isHomePage=computed(()=>{
         </svg>
         <span class="font-bold text-xl">frontend_developer</span>
       </RouterLink>
-      <div class="flex justify-end mb-40px items-center">
-        <p class="text-white mr-4 italic">Let's <span class="font-semibold not-italic">create</span> together</p>
-        <a href="https://linkedin.com/in/olegsloboydan"
-           class="group flex items-center p-[8px] rounded-full shadow-black m-3 hover:shadow-lg bg-white transition duration-500 ease-in-out"
-           target="_blank">
-          <font-awesome-icon :icon="['fab', 'linkedin']" class="h-6 w-6 group-hover:text-[#0e76a8] transition duration-500 ease-in-out"/>
-        </a>
-        <a href="https://github.com/teddi90"
-           class="group flex items-center p-[8px] rounded-full shadow-black m-3 hover:shadow-lg bg-white transition duration-500 ease-in-out"
-           target="_blank">
-          <font-awesome-icon :icon="['fab', 'github']" class="h-6 w-6 group-hover:text-yellow-500 transition duration-500 ease-in-out"/>
-        </a>
-        <a href="https://www.facebook.com/oleg510bodyan/"
-           class="group flex items-center p-[8px] rounded-full shadow-black m-3 hover:shadow-lg bg-white transition duration-500 ease-in-out"
-           target="_blank">
-          <font-awesome-icon :icon="['fab', 'facebook-f']" class="h-6 w-6 group-hover:text-[#3b5998] transition duration-500 ease-in-out"/>
-        </a>
+      <div class="flex justify-end mb-40px">
+
+        <div class="flex items-center">
+          <p class="text-white mr-4 italic">Let's <span class="font-semibold not-italic">create</span> together</p>
+          <a href="https://linkedin.com/in/olegsloboydan"
+             class="group flex items-center p-[8px] rounded-full shadow-black m-3 hover:shadow-lg bg-white transition duration-500 ease-in-out"
+             target="_blank">
+            <font-awesome-icon :icon="['fab', 'linkedin']"
+                               class="h-6 w-6 group-hover:text-[#0e76a8] transition duration-500 ease-in-out"/>
+          </a>
+          <a href="https://github.com/teddi90"
+             class="group flex items-center p-[8px] rounded-full shadow-black m-3 hover:shadow-lg bg-white transition duration-500 ease-in-out"
+             target="_blank">
+            <font-awesome-icon :icon="['fab', 'github']"
+                               class="h-6 w-6 group-hover:text-yellow-500 transition duration-500 ease-in-out"/>
+          </a>
+          <a href="https://www.facebook.com/oleg510bodyan/"
+             class="group flex items-center p-[8px] rounded-full shadow-black m-3 hover:shadow-lg bg-white transition duration-500 ease-in-out"
+             target="_blank">
+            <font-awesome-icon :icon="['fab', 'facebook-f']"
+                               class="h-6 w-6 group-hover:text-[#3b5998] transition duration-500 ease-in-out"/>
+          </a>
+        </div>
       </div>
       <h4 class="text-white text-xs"
           :class="[!isHomePage ? 'text-center':'' ]"
-      >All rights reserved <font-awesome-icon :icon="['far', 'copyright']" class="w-3 h-3"/> 2024</h4>
+      >All rights reserved
+        <font-awesome-icon :icon="['far', 'copyright']" class="w-3 h-3"/>
+        2024
+      </h4>
     </div>
   </footer>
 </template>

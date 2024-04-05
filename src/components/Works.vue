@@ -14,7 +14,9 @@ const filteredWorks = computed(() => {
     return store.getFrontendWorks();
   } else if (filterSelect.value === 'fullstack') {
     return store.getFullstackWorks();
-  }
+  } else if (filterSelect.value === 'pet_project') {
+  return store.getPetProjectWorks();
+}
 })
 </script>
 
@@ -42,23 +44,32 @@ const filteredWorks = computed(() => {
                 :class="[filterSelect==='fullstack'? 'bg-mainColor text-white' : '']"
         >Fullstack
         </button>
-        <button @click="setFilter('pet_projects')"
+        <button @click="setFilter('pet_project')"
                 type="button"
                 class="py-1 px-2 rounded-lg dark:text-white"
-                :class="[filterSelect==='pet_projects'? 'bg-mainColor text-white' : '']"
+                :class="[filterSelect==='pet_project'? 'bg-mainColor text-white' : '']"
         >Pet projects
         </button>
       </div>
-      <div class="grid grid-cols-3 gap-9">
+      <div class="grid grid-cols-4 gap-9">
         <template v-for="work in filteredWorks" :key="work.id">
           <div
               class="group shadow-xl rounded-lg p-4 hover:shadow-black transition duration-300 ease-out dark:bg-darkBG">
             <div class="mb-2 relative pt-[70%] overflow-hidden">
               <img :src="'/src/assets/images/'+work.image" :alt="work.name"
                    class="absolute top-0 left-[50%] min-w-[100%] min-h-[100%] -translate-x-[50%] group-hover:scale-[1.3] transition duration-300 ease-out">
+              <div class="flex h-full absolute w-full top-0 left-0  items-center bg-black bg-opacity-80 z-2 opacity-0 group-hover:opacity-100 transition duration-300 ease-out">
+                <div class="flex flex-1 justify-center items-center p-2 flex-wrap space-x-2">
+                   <span v-for="tech in work.technologies" :key="tech"
+                      class="border border-white text-white text-xs p-1 mb-2">
+                    {{ tech }}
+                  </span>
+                </div>
+              </div>
             </div>
-            <RouterLink :to="{name:'work', params:{id:work.id}}" class="block font-semibold mb-1 dark:text-white hover:text-mainColorDarker transition duration-300 ease-out">
-              {{work.name}}
+            <RouterLink :to="{name:'work', params:{id:work.id}}"
+                        class="block font-semibold mb-1 dark:text-white hover:text-mainColorDarker transition duration-300 ease-out">
+              {{ work.name }}
             </RouterLink>
             <a :href="work.link" target="_blank"
                class="flex items-center group/link hover:text-mainColor dark:text-white transition duration-300 ease-out">

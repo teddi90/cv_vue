@@ -51,7 +51,7 @@ const filteredWorks = computed(() => {
         >Pet projects
         </button>
       </div>
-      <div class="grid grid-cols-4 gap-9">
+      <div class="grid md:grid-cols-2 md:gap-5 lg:grid-cols-3 lg:gap-5 xl:grid-cols-4 xl:gap-7">
         <template v-for="work in filteredWorks" :key="work.id">
           <div
               class="group shadow-xl rounded-lg p-4 hover:shadow-black transition duration-300 ease-out dark:bg-darkBG">

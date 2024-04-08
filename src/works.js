@@ -94,7 +94,7 @@ export  default {
             type:'frontend',
             name:'M|Design',
             image:'mdesign.png',
-            description:'Site for a design studio. I created the main page end separate pages with works from the portfolio',
+            description:'Site for a design studio. I created the main page and separate pages with works from the portfolio',
             link:'https://teddi90.github.io/mdesign/',
             year:'2018',
             project_link:'https://github.com/teddi90/mdesign',

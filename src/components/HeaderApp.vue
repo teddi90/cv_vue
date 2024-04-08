@@ -43,10 +43,10 @@ onUnmounted(()=>{
             <path stroke-linecap="round" stroke-linejoin="round"
                   d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z"/>
           </svg>
-          <span class="font-bold">frontend_developer</span>
+          <span class="font-bold text-sm sm:text-base">frontend_developer</span>
         </RouterLink>
         <div v-if="isHomePage"
-            class="menu shadow-xl fixed w-[300px] bottom-[20px] left-0 right-0 bg-gray-300 bg-opacity-20 dark:bg-white dark:bg-opacity-20  px-[25px] py-[15px] rounded-[40px] mx-auto">
+            class="menu shadow-xl fixed w-[270px] sm:w-[300px] bottom-[20px] left-0 right-0 bg-gray-300 bg-opacity-20 dark:bg-white dark:bg-opacity-20 px-[15px] py-[10px] sm:px-[17px] sm:py-[12px] rounded-[40px] mx-auto">
           <ul class="flex justify-between">
             <li>
               <a href="#home" class="dark:text-white flex items-center p-[7px] rounded-full"

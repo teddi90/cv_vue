@@ -20,17 +20,17 @@ onMounted(() => {
 
 <template>
   <main v-if="work">
-    <section class="py-[120px] dark:text-white dark:bg-black">
+    <section class="pt-[50px] md:pt-[80px] lg:pt-[100px] dark:text-white pb-0">
       <div class="container mx-auto">
-        <div class="flex gap-8">
-          <div class="flex-1">
+        <div class="flex flex-wrap md:gap-5 lg:gap-8">
+          <div class="md:flex-1 mb-3 md:mb-0">
             <img :src="`/src/assets/images/${work.image}`" class="rounded-md" :alt="work.name">
           </div>
-          <div class="flex-1">
+          <div class="md:flex-1">
             <h2 class="text-xl mb-5 font-bold">{{ work.name }}</h2>
-            <div class="mb-5">
+            <div class="mb-3 flex flex-wrap">
               <span v-for="technology in work.technologies"
-                    class="py-1 px-2 border border-black dark:border-white mr-2 text-sm">
+                    class="py-1 px-2 mb-2 border border-black dark:border-white mr-2 text-sm">
                 {{ technology }}
               </span>
             </div>

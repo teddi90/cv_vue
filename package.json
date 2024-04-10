@@ -16,6 +16,7 @@
     "@fortawesome/vue-fontawesome": "^3.0.6",
     "@vueuse/core": "^10.9.0",
     "axios": "^1.6.8",
+    "gsap": "^3.12.5",
     "pinia": "^2.1.7",
     "pinia-plugin-persistedstate": "^3.2.1",
     "uuid": "^9.0.1",

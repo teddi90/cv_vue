@@ -7,6 +7,7 @@ const store=useSVStore();
 const currentSection = ref('home');
 const scrollY = ref(false);
 const router=useRouter();
+
 const isHomePage=computed(()=>{
   return router.currentRoute.value.name==='home'
 })
@@ -22,7 +23,6 @@ const watchScroll=() => {
   });
 }
 onMounted(() => {
-
   window.addEventListener("scroll",watchScroll );
 });
 onUnmounted(()=>{

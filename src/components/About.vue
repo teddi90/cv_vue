@@ -17,14 +17,14 @@ const setAboutMessage = (value) => {
           <img class="rounded-[24px] shadow-lg w-[100%] sm:max-w-[300px] lg:max-w-[350px]" src="@/assets/images/photo2.jpg" alt="">
         </div>
         <div class="flex-1">
-          <div class="flex justify-center flex-wrap space-x-6 lg:space-x-8 mb-6 md:mb-12">
+          <div class="flex justify-center flex-wrap space-x-3 lg:space-x-8 mb-6 md:mb-12">
             <div class="flex justify-center">
               <div @mouseover="setAboutMessage('experience')"
                    class="about__btn group"
                    :class="[aboutMessage==='experience' ? 'shadow-custom_black' : '']"
               >
                 <font-awesome-icon :icon="['far', 'keyboard']"
-                                   class="h-7 w-7 mb-1 dark:text-white group-hover:text-blue-700 transition ease-in duration-300"
+                                   class="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 mb-1 dark:text-white group-hover:text-blue-700 transition ease-in duration-300"
                                    :class="[aboutMessage==='experience' ? 'text-blue-700' : '']"
                 />
                 <h3 class="text-sm sm:text-base font-semibold dark:text-white">
@@ -39,7 +39,7 @@ const setAboutMessage = (value) => {
                    :class="[aboutMessage==='completed' ? 'shadow-custom_black' : '']"
               >
                 <font-awesome-icon :icon="['fas', 'laptop-file']"
-                                   class="h-7 w-7 mb-1 dark:text-white group-hover:text-green-800 transition ease-in duration-300"
+                                   class="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 mb-1 dark:text-white group-hover:text-green-800 transition ease-in duration-300"
                                    :class="[aboutMessage==='completed' ? 'text-green-800' : '']"
                 />
 
@@ -55,7 +55,7 @@ const setAboutMessage = (value) => {
                    :class="[aboutMessage==='pet_project' ? 'shadow-custom_black' : '']"
               >
                 <font-awesome-icon :icon="['fas', 'laptop-code']"
-                                   class="h-7 w-7 mb-1 dark:text-white group-hover:text-orange-500 transition ease-in duration-300"
+                                   class="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 mb-1 dark:text-white group-hover:text-orange-500 transition ease-in duration-300"
                                    :class="[aboutMessage==='pet_project' ? 'text-orange-500' : '']"
                 />
                 <h3 class="text-sm sm:text-base font-semibold dark:text-white">

@@ -11,8 +11,8 @@ import Contacts from "@/components/Contacts.vue";
       <Hero/>
       <About/>
       <Skills/>
-<!--      <Works/>-->
-<!--      <Contacts/>-->
+      <Works/>
+      <Contacts/>
     </main>
 </template>
 

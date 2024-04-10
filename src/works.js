@@ -70,7 +70,7 @@ export  default {
         {
             id:uuidv4(),
             type:'frontend',
-            name:'fooseeshoes',
+            name:'Fooseeshoes',
             image:'shoes.jpg',
             description:'Exam paper for an internship in the company. A fully responsive one-page store with a slider and banners that change content',
             link:'https://github.com/teddi90/fooseeshoes',

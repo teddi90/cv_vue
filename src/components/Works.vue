@@ -1,6 +1,9 @@
 <script setup>
 import {useSVStore} from "@/stores/cv.js";
-import {computed, ref} from "vue";
+import {computed, onMounted, onUnmounted, ref} from "vue";
+import {gsap} from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 const store = useSVStore();
 const filterSelect = ref('all');
@@ -15,9 +18,24 @@ const filteredWorks = computed(() => {
   } else if (filterSelect.value === 'fullstack') {
     return store.getFullstackWorks();
   } else if (filterSelect.value === 'pet_project') {
-  return store.getPetProjectWorks();
-}
+    return store.getPetProjectWorks();
+  }
 })
+const beforeEnter=(el)=>{
+ el.style.opacity=0;
+ el.style.transform='translateY(100px)'
+
+}
+const enter=(el,done)=>{
+  gsap.to(el,{
+    opacity:1,
+    y:0,
+    duration:2,
+    onComplete:done,
+    ease:"bounce",
+    stagger:0.2,
+  })
+}
 </script>
 
 <template>
@@ -25,36 +43,40 @@ const filteredWorks = computed(() => {
     <span class="subtitle">My Portfolio</span>
     <h2 class="title">Recent Works</h2>
     <div class="container mx-auto">
-      <div class="flex justify-center space-x-3 mb-9">
+      <div class="flex justify-center space-x-1 md:space-x-3 mb-9">
         <button @click="setFilter('all')"
                 type="button"
-                class="py-1 px-2 rounded-lg dark:text-white"
+                class="text-sm md:text-base py-1 px-2 rounded-lg dark:text-white"
                 :class="[filterSelect==='all'? 'bg-mainColor text-white' : '']"
         >All
         </button>
         <button @click="setFilter('frontend')"
                 type="button"
-                class="py-1 px-2 rounded-lg dark:text-white"
+                class="text-sm md:text-base py-1 px-2 rounded-lg dark:text-white"
                 :class="[filterSelect==='frontend'? 'bg-mainColor text-white' : '']"
         >Frontend
         </button>
         <button @click="setFilter('fullstack')"
                 type="button"
-                class="py-1 px-2 rounded-lg dark:text-white"
+                class="text-sm md:text-base py-1 px-2 rounded-lg dark:text-white"
                 :class="[filterSelect==='fullstack'? 'bg-mainColor text-white' : '']"
         >Fullstack
         </button>
         <button @click="setFilter('pet_project')"
                 type="button"
-                class="py-1 px-2 rounded-lg dark:text-white"
+                class="text-sm md:text-base py-1 px-2 rounded-lg dark:text-white"
                 :class="[filterSelect==='pet_project'? 'bg-mainColor text-white' : '']"
         >Pet projects
         </button>
       </div>
-      <div class="grid md:grid-cols-2 md:gap-5 lg:grid-cols-3 lg:gap-5 xl:grid-cols-4 xl:gap-7">
-        <template v-for="work in filteredWorks" :key="work.id">
-          <div
-              class="group shadow-xl rounded-lg p-4 hover:shadow-black transition duration-300 ease-out dark:bg-darkBG">
+      <transition-group
+          tag="div"
+          appear
+          @before-enter="beforeEnter"
+          @enter="enter"
+          class="grid md:grid-cols-2 md:gap-5 lg:grid-cols-3 lg:gap-5 xl:grid-cols-4 xl:gap-5">
+          <div v-for="work in filteredWorks" :key="work.id"
+              class="work group shadow-xl rounded-lg p-4 hover:shadow-black transition duration-300 ease-out dark:bg-darkBG">
             <div class="mb-2 relative pt-[70%] overflow-hidden">
               <img :src="'/src/assets/images/'+work.image" :alt="work.name"
                    class="absolute top-0 left-[50%] min-w-[100%] min-h-[100%] -translate-x-[50%] group-hover:scale-[1.3] transition duration-300 ease-out">
@@ -80,8 +102,7 @@ const filteredWorks = computed(() => {
               </svg>
               Visit </a>
           </div>
-        </template>
-      </div>
+      </transition-group>
     </div>
   </section>
 </template>

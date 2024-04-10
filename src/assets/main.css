@@ -73,6 +73,12 @@ body {
     }
 
 }
+.btn{
+    @apply text-sm md:text-base px-3 py-2 md:px-4 md:py-3
+}
+.btn__primary{
+    @apply text-sm md:text-base px-3 py-2 md:px-4 md:py-3
+}
 .container{
     @apply px-[10px] sm:max-w-[none] lg:max-w-[1200px];
 }
@@ -90,7 +96,7 @@ body {
     backdrop-filter: blur(5px);
 }
 .about__btn{
-    @apply flex mb-4 sm:mb-0 flex-col w-[120px] md:w-[130px] lg:w-[150px] items-center px-2 py-2 sm:p-2 md:p-4 lg:p-6 shadow-xl rounded-2xl dark:bg-darkBG hover:shadow-black transition ease-in duration-300;
+    @apply flex mb-4 sm:mb-0 flex-col w-[105px] sm:w-[120px] md:w-[130px] lg:w-[150px] items-center px-2 py-2 sm:p-2 md:p-4 lg:p-6 shadow-xl rounded-2xl dark:bg-darkBG hover:shadow-black transition ease-in duration-300;
 }
 .shadow-custom_black{
     @apply shadow-black;
@@ -115,6 +121,15 @@ body {
 }
 .work-card__date{
     @apply dark:text-white text-gray-500 opacity-0 text-xs group-hover:opacity-100 transition ease-in-out duration-300 whitespace-nowrap;
+}
+.contact-btn{
+    @apply flex flex-col justify-center w-[105px] sm:w-[115px] md:w-[125px] lg:w-[150px] items-center p-2 sm:p-3 md:p-4 lg:p-5 shadow-xl rounded-lg hover:shadow-black transition ease-in duration-300 dark:bg-darkBG;
+}
+.contact-bnt__title{
+    @apply text-sm sm:text-base font-semibold dark:text-white mb-1;
+}
+.contact-btn__img{
+    @apply w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7 mb-1 dark:text-white transition ease-in duration-300;
 }
 .input {
     color: #333;
@@ -157,6 +172,7 @@ body {
     transition: 0.3s;
     z-index: -1;
     letter-spacing: 0.5px;
+    @apply text-sm sm:text-base
 }
 
 .input:focus ~ .label, .has-content.input ~ .label {
@@ -250,6 +266,7 @@ body {
     transition: 0.3s;
     z-index: -1;
     letter-spacing: 0.5px;
+    @apply text-sm sm:text-base
 }
 
 .textarea:focus ~ label, .has-content.textarea ~ label {

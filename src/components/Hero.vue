@@ -13,12 +13,15 @@ onMounted(()=>{
     x:'-200',
     autoAlpha:0,
     ease:'power2.out',
-    duration:1.5
+    duration:2,
+    delay:9
   });
   gsap.from(scrollBtn.value,{
+    x:'200',
     autoAlpha:0,
+    duration:2,
     ease:'power2.out',
-    duration:2
+    delay:9
   })
   const tl=gsap.timeline({duration:2});
   tl.from(greeting.value,{
@@ -41,16 +44,12 @@ onMounted(()=>{
     autoAlpha:0,
     duration:1,
     ease:"power2.out"
-  }).fromTo(image.value,{
-    y:'-100', autoAlpha:0,
-    borderRadius:0,
-
-  },{
-    y:0,
-    borderRadius:1000,
+  }).from(image.value,{
+    y:'-100',
+    autoAlpha:0,
     duration:2,
-    autoAlpha:1,
-    ease:"power2.out"})
+    ease:"power2.out"
+  })
   tl.play();
 })
 </script>
@@ -89,7 +88,7 @@ onMounted(()=>{
         </div>
         <img ref="image" class="h-[200px] w-[200px] sm:h-[250px] sm:w-[250px] md:h-[300px] md:w-[300px] rounded-full" src="@/assets/images/photo.jpg" alt="photo">
         <div ref="scrollBtn" class="flex flex-col">
-          <a href="#about" class="relative flex items-center mt-[40px] sm:mt-[70px] md:mt-20 group p-[7px] rounded-full shadow-black mb-2 hover:bg-mainColor dark:bg-white dark:hover:bg-mainColor transition duration-500 ease-in-out">
+          <a href="#about" class="relative flex items-center mt-[40px] sm:mt-[70px] md:mt-[105px] group p-[7px] rounded-full shadow-black mb-2 hover:bg-mainColor dark:bg-white dark:hover:bg-mainColor transition duration-500 ease-in-out">
             <font-awesome-icon :icon="['fas', 'computer-mouse']" class="h-5 w-5 group-hover:text-white transition duration-500 ease-in-out"/>
             <span class="absolute rotate-90 w-[100px] font-semibold -left-[33px] top-[87px] dark:text-white group-hover:text-mainColor transition duration-500 ease-in-out">Scroll Down</span>
           </a>

@@ -74,6 +74,12 @@ body {
     }
 
 }
+.header{
+    @apply bg-white py-2 fixed top-0 left-0 w-[100%] z-[99] dark:bg-black;
+}
+.menu{
+    @apply shadow-xl fixed z-[999999] w-[270px] sm:w-[300px] bottom-[20px] left-0 right-0 bg-gray-300 bg-opacity-20 dark:bg-white dark:bg-opacity-20 px-[15px] py-[10px] sm:px-[17px] sm:py-[12px] rounded-[40px] mx-auto;
+}
 .btn{
     @apply text-sm md:text-base px-3 py-2 md:px-4 md:py-3
 }
@@ -98,6 +104,9 @@ body {
 }
 .about__btn{
     @apply flex mb-4 sm:mb-0 flex-col w-[105px] sm:w-[120px] md:w-[130px] lg:w-[150px] items-center px-2 py-2 sm:p-2 md:p-4 lg:p-6 shadow-xl rounded-2xl dark:bg-darkBG hover:shadow-black transition ease-in duration-300;
+}
+.skills__card{
+    @apply rounded-xl dark:bg-darkBG shadow-xl py-3 px-5 sm:py-4 sm:px-6 md:py-8 md:px-12 lg:py-10 lg:px-14;
 }
 .shadow-custom_black{
     @apply shadow-black;

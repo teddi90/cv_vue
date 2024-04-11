@@ -8,48 +8,52 @@ const image=ref(null);
 const social=ref(null);
 const buttons=ref(null);
 const scrollBtn=ref(null);
+
 onMounted(()=>{
-  gsap.from(social.value,{
+  const tl=gsap.timeline({ease:'power2.out'});
+  tl.from(greeting.value,{
+    scale:3,
+    duration:2,
+  }).from(fullName.value,{
+    autoAlpha:0,
+    scale:3,
+    duration:2,
+  }).from(profession.value,{
+    y:'-100',
+    autoAlpha:0,
+    scale:2,
+    duration:1,
+   }).from(buttons.value,{
+    y:'100',
+    autoAlpha:0,
+    duration:1,
+  },5).from(image.value,{
+    y:'-100',
+    autoAlpha:0,
+    duration:1,
+  },5)
+      .from(social.value,{
     x:'-200',
     autoAlpha:0,
     ease:'power2.out',
     duration:2,
-    delay:9
-  });
-  gsap.from(scrollBtn.value,{
+  },5.5).from(scrollBtn.value,{
     x:'200',
     autoAlpha:0,
     duration:2,
     ease:'power2.out',
-    delay:9
-  })
-  const tl=gsap.timeline({duration:2});
-  tl.from(greeting.value,{
-    scale:3,
+  },5.5).from('.header',{
+    y:'-100',
+    autoAlpha:0,
     ease:'power2.out',
     duration:2,
-  })
-  tl.from(fullName.value,{
-    y:'-50',
-    autoAlpha:0,
-    scale:1.5,
-    duration:2,
-  }).from(profession.value,{
+  },5.5).fromTo('.menu',{
     y:'100',
     autoAlpha:0,
-    scale:2,
-    duration:1,
-  }).from(buttons.value,{
-    y:'-100',
-    autoAlpha:0,
-    duration:1,
-    ease:"power2.out"
-  }).from(image.value,{
-    y:'-100',
-    autoAlpha:0,
-    duration:2,
-    ease:"power2.out"
-  })
+  },{y:0,
+    autoAlpha:1,
+    ease:'power2.out',
+    duration:2,},5.5)
   tl.play();
 })
 </script>

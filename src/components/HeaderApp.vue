@@ -8,8 +8,6 @@ const store=useSVStore();
 const currentSection = ref('home');
 const scrollY = ref(false);
 const router=useRouter();
-const header=ref(null);
-const menu=ref(null);
 
 const isHomePage=computed(()=>{
   return router.currentRoute.value.name==='home'
@@ -22,18 +20,10 @@ const watchScroll=() => {
   allSections.forEach((section) => {
     if (window.scrollY >= section.offsetTop - 120) {
       currentSection.value = section.id;
-      menu.value.style.transform='translateY(0px)';
     }
   });
 }
 onMounted(() => {
-  gsap.from(header.value,{
-    y:'-200',
-    autoAlpha:0,
-    ease:'power2.out',
-    duration:2,
-    delay:9
-  });
   window.addEventListener("scroll",watchScroll );
 });
 onUnmounted(()=>{
@@ -42,7 +32,7 @@ onUnmounted(()=>{
 </script>
 
 <template>
-  <header ref="header" class="bg-white py-2 fixed top-0 left-0 w-[100%] z-[99] dark:bg-black"
+  <header class="header"
           :class="[scrollY? 'shadow-md' : '']"
           id="header">
     <div class="container mx-auto">
@@ -64,8 +54,8 @@ onUnmounted(()=>{
       </nav>
     </div>
   </header>
-  <div v-if="isHomePage" ref="menu"
-       class="menu shadow-xl fixed translate-y-[100px] w-[270px] sm:w-[300px] bottom-[20px] left-0 right-0 bg-gray-300 bg-opacity-20 dark:bg-white dark:bg-opacity-20 px-[15px] py-[10px] sm:px-[17px] sm:py-[12px] rounded-[40px] mx-auto transition-all ease-linear duration-500">
+  <div v-if="isHomePage"
+       class="menu">
     <ul class="flex justify-between">
       <li>
         <a href="#home" class="dark:text-white flex items-center p-[7px] rounded-full"

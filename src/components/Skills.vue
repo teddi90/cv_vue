@@ -8,111 +8,119 @@
     <h2 class="title">My Experience</h2>
     <div class="container mx-auto">
       <div class="flex justify-center mb-[100px]">
-        <div class="rounded-xl dark:bg-darkBG shadow-xl py-3 px-5 sm:py-4 sm:px-6 md:py-8 md:px-12 lg:py-10 lg:px-14">
+        <div class="skills__card">
           <h3 class="font-semibold text-xl mb-5 dark:text-white text-center">Hard Skills</h3>
           <div class="flex justify-between flex-wrap sm:space-x-7 md:space-x-20 xl:space-x-39">
-            <div class="mr-2 sm:mr-0">
-              <div class="flex items-center mb-2">
+            <ul class="mr-2 sm:mr-0">
+              <li class="flex items-center mb-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                      stroke="currentColor" class="w-5 h-5 text-mainColor mr-1">
                   <path stroke-linecap="round" stroke-linejoin="round"
                         d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
                 </svg>
                 <h3 class="text-sm md:text-base font-semibold dark:text-white">HTML/CSS/SCSS</h3>
-              </div>
-              <div class="flex items-center mb-2">
+              </li>
+              <li class="flex items-center mb-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                      stroke="currentColor" class="w-5 h-5 text-mainColor mr-1">
                   <path stroke-linecap="round" stroke-linejoin="round"
                         d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
                 </svg>
                 <h3 class="text-sm md:text-base font-semibold dark:text-white">JavaScript</h3>
-              </div>
-              <div class="flex items-center mb-2">
+              </li>
+              <li class="flex items-center mb-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                      stroke="currentColor" class="w-5 h-5 text-mainColor mr-1">
                   <path stroke-linecap="round" stroke-linejoin="round"
                         d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
                 </svg>
                 <h3 class="text-sm md:text-base font-semibold dark:text-white">Vue3</h3>
-              </div>
-              <div class="flex items-center mb-2">
+              </li>
+              <li class="flex items-center mb-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                      stroke="currentColor" class="w-5 h-5 text-mainColor mr-1">
                   <path stroke-linecap="round" stroke-linejoin="round"
                         d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
                 </svg>
                 <h3 class="text-sm md:text-base font-semibold dark:text-white">Nuxt3</h3>
-              </div>
-              <div class="flex items-center mb-2">
+              </li>
+              <li class="flex items-center mb-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                      stroke="currentColor" class="w-5 h-5 text-mainColor mr-1">
                   <path stroke-linecap="round" stroke-linejoin="round"
                         d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
                 </svg>
                 <h3 class="text-sm md:text-base font-semibold dark:text-white">Pinia/Vuex</h3>
-              </div>
-            </div>
-            <div class="mr-2 sm:mr-0">
-              <div class="flex items-center mb-2">
+              </li>
+            </ul>
+            <ul class="mr-2 sm:mr-0">
+              <li class="flex items-center mb-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                      stroke="currentColor" class="w-5 h-5 text-mainColor mr-1">
                   <path stroke-linecap="round" stroke-linejoin="round"
                         d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
                 </svg>
                 <h3 class="text-sm md:text-base font-semibold dark:text-white">Git</h3>
-              </div>
-              <div class="flex items-center mb-2">
+              </li>
+              <li class="flex items-center mb-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                      stroke="currentColor" class="w-5 h-5 text-mainColor mr-1">
                   <path stroke-linecap="round" stroke-linejoin="round"
                         d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
                 </svg>
                 <h3 class="text-sm md:text-base font-semibold dark:text-white">Tailwind</h3>
-              </div>
-              <div class="flex items-center mb-2">
+              </li>
+              <li class="flex items-center mb-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                      stroke="currentColor" class="w-5 h-5 text-mainColor mr-1">
                   <path stroke-linecap="round" stroke-linejoin="round"
                         d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
                 </svg>
                 <h3 class="text-sm md:text-base font-semibold dark:text-white">Bootstrap</h3>
-              </div>
-              <div class="flex items-center mb-2">
+              </li>
+              <li class="flex items-center mb-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                      stroke="currentColor" class="w-5 h-5 text-mainColor mr-1">
                   <path stroke-linecap="round" stroke-linejoin="round"
                         d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
                 </svg>
                 <h3 class="text-sm md:text-base font-semibold dark:text-white">WordPress</h3>
-              </div>
-            </div>
-            <div>
-              <div class="flex items-center mb-2">
+              </li>
+            </ul>
+            <ul>
+              <li class="flex items-center mb-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                      stroke="currentColor" class="w-5 h-5 text-mainColor mr-1">
                   <path stroke-linecap="round" stroke-linejoin="round"
                         d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
                 </svg>
                 <h3 class="text-sm md:text-base font-semibold dark:text-white">Gulp</h3>
-              </div>
-              <div class="flex items-center mb-2">
+              </li>
+              <li class="flex items-center mb-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                      stroke="currentColor" class="w-5 h-5 text-mainColor mr-1">
                   <path stroke-linecap="round" stroke-linejoin="round"
                         d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
                 </svg>
                 <h3 class="text-sm md:text-base font-semibold dark:text-white">Figma</h3>
-              </div>
-              <div class="flex items-center mb-2">
+              </li>
+              <li class="flex items-center mb-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                      stroke="currentColor" class="w-5 h-5 text-mainColor mr-1">
                   <path stroke-linecap="round" stroke-linejoin="round"
                         d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
                 </svg>
                 <h3 class="text-sm md:text-base font-semibold dark:text-white">Photoshop</h3>
-              </div>
-            </div>
+              </li>
+              <li class="flex items-center mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                     stroke="currentColor" class="w-5 h-5 text-mainColor mr-1">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+                </svg>
+                <h3 class="text-sm md:text-base font-semibold dark:text-white">GSAP</h3>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

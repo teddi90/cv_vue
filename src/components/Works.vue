@@ -21,29 +21,43 @@ const filteredWorks = computed(() => {
     return store.getPetProjectWorks();
   }
 })
-const beforeEnter=(el)=>{
+const onBeforeEnter=(el)=>{
  el.style.opacity=0;
- el.style.transform='translateY(100px)'
+ el.style.transform='translateX(300px)'
 
 }
-const enter=(el,done)=>{
+const onEnter=(el,done)=>{
   gsap.to(el,{
     opacity:1,
-    y:0,
-    duration:2,
+    x:0,
+    duration:.5,
     onComplete:done,
-    ease:"bounce",
-    stagger:0.2,
+    ease:"power2.out",
+  })
+}
+const onBeforeLeave=(el)=>{
+  gsap.to(el,{
+    opacity:0,
+    ease:"power2.out",
+  })
+}
+const onLeave=(el)=>{
+  gsap.to(el,{
+    opacity:0,
+    x:-300,
+    duration:.5,
+    ease:"power2.out",
   })
 }
 </script>
+
 
 <template>
   <section class="dark:bg-black py-[120px]" id="work">
     <span class="subtitle">My Portfolio</span>
     <h2 class="title">Recent Works</h2>
     <div class="container mx-auto">
-      <div class="flex justify-center space-x-1 md:space-x-3 mb-9">
+      <div class="work__buttons flex justify-center space-x-1 md:space-x-3 mb-9">
         <button @click="setFilter('all')"
                 type="button"
                 class="text-sm md:text-base py-1 px-2 rounded-lg dark:text-white"
@@ -72,11 +86,15 @@ const enter=(el,done)=>{
       <transition-group
           tag="div"
           appear
-          @before-enter="beforeEnter"
-          @enter="enter"
+          name="fade"
+          @before-enter="onBeforeEnter"
+          @enter="onEnter"
+          @leave="onLeave"
+          @before-leave="onBeforeLeave"
+          mode="out-in"
           class="grid md:grid-cols-2 md:gap-5 lg:grid-cols-3 lg:gap-5 xl:grid-cols-4 xl:gap-5">
           <div v-for="work in filteredWorks" :key="work.id"
-              class="work group shadow-xl rounded-lg p-4 hover:shadow-black transition duration-300 ease-out dark:bg-darkBG">
+              class="portfolio-work group shadow-xl rounded-lg p-4 hover:shadow-black transition duration-300 ease-out dark:bg-darkBG">
             <div class="mb-2 relative pt-[70%] overflow-hidden">
               <img :src="'/src/assets/images/'+work.image" :alt="work.name"
                    class="absolute top-0 left-[50%] min-w-[100%] min-h-[100%] -translate-x-[50%] group-hover:scale-[1.3] transition duration-300 ease-out">
@@ -106,3 +124,8 @@ const enter=(el,done)=>{
     </div>
   </section>
 </template>
+<style>
+.fade-enter-active{
+  transition-delay: 0.2s;
+}
+</style>

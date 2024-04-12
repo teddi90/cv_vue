@@ -124,76 +124,98 @@
           </div>
         </div>
       </div>
-      <h3 class="font-bold text-xl text-center mb-8 dark:text-white">Job</h3>
-      <div class="grid md:grid-cols-2 mb-8">
-        <div class="group flex">
-          <div class="work-card work-card_left  work-card_left_start">
-            <div class="flex justify-between">
-              <h4 class="work-card__title">GRT</h4>
-              <span class="work-card__date">2023 - Now</span>
+      <div class="job">
+        <h3 class="font-bold text-xl text-center mb-8 dark:text-white">Job</h3>
+        <div class="grid md:grid-cols-2 mb-8">
+          <div class="group work-card-wrapper">
+            <div class="work-card__circle work-card__circle_top"></div>
+            <div class="work-card__line work-card__line_right"></div>
+            <div class="work-card work-card_left">
+              <div class="flex justify-between">
+                <h4 class="work-card__title">GRT</h4>
+                <span class="work-card__date">2023 - Now</span>
+              </div>
+              <h5 class="text-sm mb-4 group-hover:text-mainColorDarker transition ease-in-out duration-300">Frontend
+                developer Vue</h5>
+              <p class="italic text-sm"> Worked with technologies like Vue3, Nuxt3 and WordPress. Worked on a project
+                that used Nuxt/WordPress headless technology although created a Woocomerce website and SPA with Vue3</p>
             </div>
-            <h5 class="text-sm mb-4 group-hover:text-mainColorDarker transition ease-in-out duration-300">Frontend developer Vue</h5>
-            <p class="italic text-sm"> Worked with technologies like Vue3, Nuxt3 and WordPress. Worked on a project that used Nuxt/WordPress headless technology although created a Woocomerce website and SPA with Vue3</p>
           </div>
-        </div>
-        <div></div>
-        <div></div>
-        <div class="flex group">
-          <div class="work-card work-card_right work-card_right_end">
-            <div class=" flex justify-between">
-              <h4 class="work-card__title">Freelance</h4>
-              <span class="work-card__date">2018 (6 months)</span>
+          <div></div>
+          <div></div>
+          <div class="group work-card-wrapper">
+            <div class="work-card__circle work-card__circle_bottom"></div>
+            <div class="work-card__line work-card__line_left"></div>
+            <div class="work-card work-card_right">
+              <div class=" flex justify-between">
+                <h4 class="work-card__title">Freelance</h4>
+                <span class="work-card__date">2018 (6 months)</span>
+              </div>
+              <h5 class="text-sm mb-4 group-hover:text-mainColorDarker transition ease-in-out duration-300">Frontend
+                developer HTML/CSS/ jQuery</h5>
+              <p class="italic text-sm">Created landing pages with simple animation</p>
             </div>
-            <h5 class="text-sm mb-4 group-hover:text-mainColorDarker transition ease-in-out duration-300">Frontend developer HTML/CSS/ jQuery</h5>
-            <p class="italic text-sm">Created landing pages with simple animation</p>
           </div>
         </div>
       </div>
+      <div class="education">
+        <h3 class="font-bold text-xl text-center mb-8 dark:text-white">Education</h3>
+        <div class="grid md:grid-cols-2">
+          <div class="group work-card-wrapper">
+            <div class="work-card__circle work-card__circle_top"></div>
+            <div class="work-card__line work-card__line_right"></div>
+            <div class="work-card work-card_left">
+              <div class="flex justify-between">
+                <h4 class="work-card__title">English courses at the Profi Center</h4>
+                <span class="work-card__date">2023 (5 months)</span>
+              </div>
+              <h5 class="text-sm mb-4 group-hover:text-mainColorDarker transition ease-in-out duration-300">Learning
+                English by the Kallan method</h5>
+              <p class="italic text-sm"> Finished stage 6 of 12</p>
+            </div>
+          </div>
+          <div></div>
+          <div></div>
+          <div class="group work-card-wrapper">
+            <div class="work-card__line work-card__line_left"></div>
+            <div class="work-card work-card_right">
+              <div class=" flex justify-between">
+                <h4 class="work-card__title">Beetroot Academy</h4>
+                <span class="work-card__date">2022 (6 months)</span>
+              </div>
+              <h5 class="text-sm mb-4 group-hover:text-mainColorDarker transition ease-in-out duration-300">Courses
+                frontend developer</h5>
+              <p class="italic text-sm">Successfully completed the course and received a certificate. During the course,
+                I acquired basic knowledge of HTML, CSS, SCSS, JavaScript, BEM, Vue3, Figma</p>
+            </div>
+          </div>
+          <div class="group work-card-wrapper">
+            <div class="work-card__line work-card__line_right"></div>
+            <div class="work-card work-card_left">
+              <div class="flex justify-between">
+                <h4 class="work-card__title">English courses at the Canadian business center</h4>
+                <span class="work-card__date">2018 (3 months)</span>
+              </div>
+              <h5 class="text-sm mb-4 group-hover:text-mainColorDarker transition ease-in-out duration-300">English
+                conversation course</h5>
+              <p class="italic text-sm"> Improved my spoken English</p>
+            </div>
+          </div>
+          <div></div>
+          <div></div>
+          <div class="group work-card-wrapper">
+            <div class="work-card__line work-card__line_left"></div>
+            <div class="work-card__circle work-card__circle_bottom"></div>
 
-      <h3 class="font-bold text-xl text-center mb-8 dark:text-white">Education</h3>
-      <div class="grid md:grid-cols-2">
-        <div class="group flex">
-          <div class="work-card work-card_left  work-card_left_start">
-            <div class="flex justify-between">
-              <h4 class="work-card__title">English courses at the Profi Center</h4>
-              <span class="work-card__date">2023 (5 months)</span>
+            <div class="work-card work-card_right">
+              <div class=" flex justify-between">
+                <h4 class="work-card__title">Ivano Frankivsk National Technical University of Oil and Gas</h4>
+                <span class="work-card__date">2007-2012</span>
+              </div>
+              <h5 class="text-sm mb-4 group-hover:text-mainColorDarker transition ease-in-out duration-300">Computer
+                systems and networks</h5>
+              <p class="italic text-sm"> Graduated from the university with a Specialist diploma</p>
             </div>
-            <h5 class="text-sm mb-4 group-hover:text-mainColorDarker transition ease-in-out duration-300">Learning English by the Kallan method</h5>
-            <p class="italic text-sm"> Finished stage 6 of 12</p>
-          </div>
-        </div>
-        <div></div>
-        <div></div>
-        <div class="flex group">
-          <div class="work-card work-card_right">
-            <div class=" flex justify-between">
-              <h4 class="work-card__title">Beetroot Academy</h4>
-              <span class="work-card__date">2022 (6 months)</span>
-            </div>
-            <h5 class="text-sm mb-4 group-hover:text-mainColorDarker transition ease-in-out duration-300">Courses frontend developer</h5>
-            <p class="italic text-sm">Successfully completed the course and received a certificate. During the course, I acquired basic knowledge of HTML, CSS, SCSS, JavaScript, BEM, Vue3, Figma</p>
-          </div>
-        </div>
-        <div class="group flex">
-          <div class="work-card work-card_left">
-            <div class="flex justify-between">
-              <h4 class="work-card__title">English courses at the Canadian business center</h4>
-              <span class="work-card__date">2018 (3 months)</span>
-            </div>
-            <h5 class="text-sm mb-4 group-hover:text-mainColorDarker transition ease-in-out duration-300">English conversation course</h5>
-            <p class="italic text-sm"> Improved my spoken English</p>
-          </div>
-        </div>
-        <div></div>
-        <div></div>
-        <div class="flex group">
-          <div class="work-card work-card_right work-card_right_end">
-            <div class=" flex justify-between">
-              <h4 class="work-card__title">Ivano Frankivsk National Technical University of Oil and Gas</h4>
-              <span class="work-card__date">2007-2012</span>
-            </div>
-            <h5 class="text-sm mb-4 group-hover:text-mainColorDarker transition ease-in-out duration-300">Computer systems and networks</h5>
-            <p class="italic text-sm"> Graduated from the university with a Specialist diploma</p>
           </div>
         </div>
       </div>

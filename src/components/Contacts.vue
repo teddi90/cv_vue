@@ -37,13 +37,13 @@ const sendMessage = (values, action) => {
 </script>
 
 <template>
-  <section class="dark:bg-black py-[120px]" id="contact">
+  <section class="contact dark:bg-black py-[120px]" id="contact">
     <span class="subtitle">Get in touch</span>
-    <h2 class="title">Conatct Me</h2>
+    <h2 class="title">Contact Me</h2>
     <div class="container mx-auto">
       <div class="flex flex-wrap gap-3">
         <div class="lg:flex-1 flex w-[100%] mb-2 lg:mb-0 justify-center">
-          <div class="flex flex-col">
+          <div class="contact-question flex flex-col">
             <h3 class="text-lg font-semibold text-center mb-5 dark:text-white">Have questions or propositions?</h3>
             <div class="flex space-x-3 lg:space-x-5">
               <a href="mailto:slobodyanoleg5@gmail.com" target="_blank"
@@ -77,12 +77,12 @@ const sendMessage = (values, action) => {
           </div>
         </div>
         <div class="lg:flex-1 w-[100%]">
-          <div class="rounded-xl shadow-xl py-[20px] px-[10px] sm:py-[25px] sm:px-[15px] md:py-[30px] md:px-[20px] hover:shadow-black transition ease-in duration-300 dark:bg-darkBG">
+          <div class="form-wrapper rounded-xl shadow-xl py-[20px] px-[10px] sm:py-[25px] sm:px-[15px] md:py-[30px] md:px-[20px] hover:shadow-black transition ease-in duration-300 dark:bg-darkBG">
             <h3 class="text-lg font-semibold text-center mb-5 dark:text-white">Write me about your Project</h3>
             <Form @submit="sendMessage"
                   :validation-schema="sendMessageSchema"
                   v-slot="{errors}"
-                  class="px-4 ">
+                  class="px-4">
               <div class="md:flex md:justify-between mb-8 md:mb-5 gap-5">
                 <div class="relative w-[100%] mb-8 md:mb-6">
                   <Field  v-model="userName"

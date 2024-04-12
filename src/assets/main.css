@@ -111,21 +111,40 @@ body {
 .shadow-custom_black{
     @apply shadow-black;
 }
+
+.work-card-wrapper{
+    @apply flex relative
+}
+.work-card__circle_top{
+    @apply -top-[9px]  right-[2px] sm:right-[17px] md:-right-[5px]
+}
+.work-card__circle_bottom{
+    @apply -bottom-[9px]  right-[2px] sm:right-[17px] md:-left-[5px]
+}
+.work-card__circle{
+    @apply absolute rounded-full h-[10px] w-[10px] bg-gray-300 group-hover:bg-mainColor transition ease-in-out duration-300;
+}
+.work-card__line{
+    @apply absolute h-[105%] sm:h-[106%] md:h-[100%] w-[4px]  bg-gray-300 md:top-0  group-hover:bg-mainColor transition ease-in-out duration-300;
+}
+.work-card__line_right{
+    @apply right-[5px] sm:right-[20px] md:-right-[2px];
+}
+.work-card__line_left{
+    @apply right-[5px] sm:right-[20px] md:-left-[2px]
+}
+
 .work-card{
-    @apply relative mb-5 md:mb-0 w-[100%] mr-[30px] sm:mr-[60px] p-5 after:-top-[7px]  dark:text-white dark:bg-darkBG shadow-xl rounded-lg hover:shadow-black after:content-[''] after:block after:h-[111%] sm:after:h-[114%] md:after:h-[100%] after:w-[3px] after:-right-[22px] sm:after:-right-[37px] after:bg-gray-300 after:absolute md:after:top-0  hover:after:bg-mainColor transition ease-in-out duration-300 after:transition after:ease-in-out after:duration-300;
+    @apply relative mb-5 md:mb-0 w-[100%] mr-[30px] sm:mr-[60px] p-5  dark:text-white dark:bg-darkBG shadow-xl rounded-lg hover:shadow-black hover:after:bg-mainColor transition ease-in-out duration-300;
 }
+
 .work-card_left{
-    @apply md:after:-right-[31px] lg:after:-right-[41px] xl:after:-right-[71px] md:mr-[30px] lg:mr-[40px] xl:mr-[70px] ;
-}
-.work-card_left_start{
-    @apply before:content-[''] after:top-0 before:-top-[2px] before:-right-[24px] sm:before:-right-[39px]  md:before:-right-[33px] lg:before:-right-[43px] xl:before:-right-[73px] before:block before:rounded-full before:h-[7px] before:w-[7px] before:bg-gray-300 before:absolute hover:before:bg-mainColor transition ease-in-out duration-300 before:transition before:ease-in-out before:duration-300
-}
-.work-card_right_end{
-    @apply before:content-[''] after:-top-[16px] md:after:top-0 before:-bottom-[5px] sm:before:-bottom-[6px] md:before:-bottom-[2px] before:-right-[24px] sm:before:-right-[39px] md:before:-left-[34px] lg:before:-left-[44px] xl:before:-left-[74px] before:block before:rounded-full before:h-[7px] before:w-[7px] before:bg-gray-300 before:absolute hover:before:bg-mainColor transition ease-in-out duration-300 before:transition before:ease-in-out before:duration-300
+    @apply md:mr-[30px] lg:mr-[40px] xl:mr-[70px] ;
 }
 .work-card_right{
-    @apply md:after:-left-[32px]  md:mr-0 md:ml-[30px] lg:after:-left-[42px] lg:ml-[40px] xl:after:-left-[72px] xl:ml-[70px];
+    @apply md:mr-0 md:ml-[30px] lg:ml-[40px] xl:ml-[70px];
 }
+
 .work-card__title{
     @apply font-semibold mb-1 w-[85%];
 }

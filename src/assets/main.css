@@ -111,7 +111,9 @@ body {
 .shadow-custom_black{
     @apply shadow-black;
 }
-
+.box{
+    @apply absolute left-0 bottom-0 inline-block bg-mainColor z-[-1] h-[5px] w-0;
+}
 .work-card-wrapper{
     @apply flex relative
 }

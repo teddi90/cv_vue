@@ -2,7 +2,6 @@
 import {computed, onMounted, onUnmounted, ref} from "vue";
 import {useSVStore} from "@/stores/cv.js";
 import {useRouter} from "vue-router";
-import {gsap} from 'gsap';
 
 const store=useSVStore();
 const currentSection = ref('home');

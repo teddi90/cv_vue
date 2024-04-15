@@ -67,7 +67,7 @@ onMounted(() => {
     css: {height: '100%'},
     autoAlpha: 1,
     stagger: 0.7
-  },);
+  });
   job.fromTo('.job .work-card_left', {x: -200, autoAlpha: 0}, {x: 0, autoAlpha: 1}, '>');
   job.fromTo('.job .work-card_right', {x: 200, autoAlpha: 0}, {x: 0, autoAlpha: 1}, '<=');
   job.fromTo('.job .work-card__circle_bottom', {y: 200, scale: 3, autoAlpha: 0}, {

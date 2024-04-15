@@ -11,7 +11,9 @@ const props = defineProps({
 });
 const store = useSVStore();
 const work = ref(null);
-
+const getImagePath=(image)=> {
+  return new URL(`/src/assets/images/${image}`, import.meta.url);
+}
 onMounted(() => {
   store.getWorkById(props.id);
   work.value = store.work;
@@ -24,7 +26,7 @@ onMounted(() => {
       <div class="container mx-auto">
         <div class="flex flex-wrap md:gap-5 lg:gap-8">
           <div class="md:flex-1 mb-3 md:mb-0">
-            <img :src="`/src/assets/images/${work.image}`" class="rounded-md" :alt="work.name">
+            <img :src="getImagePath(work.image)" class="rounded-md" :alt="work.name">
           </div>
           <div class="md:flex-1">
             <h2 class="text-xl mb-5 font-bold">{{ work.name }}</h2>

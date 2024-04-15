@@ -10,6 +10,9 @@ const filterSelect = ref('all');
 const setFilter = (value) => {
   filterSelect.value = value;
 }
+const getImagePath=(image)=> {
+  return new URL(`/src/assets/images/${image}`, import.meta.url);
+}
 const filteredWorks = computed(() => {
   if (filterSelect.value === 'all') {
     return store.works;
@@ -96,7 +99,7 @@ const onLeave=(el)=>{
           <div v-for="work in filteredWorks" :key="work.id"
               class="portfolio-work group shadow-xl rounded-lg p-4 hover:shadow-black transition duration-300 ease-out dark:bg-darkBG">
             <div class="mb-2 relative pt-[70%] overflow-hidden">
-              <img :src="'@/assets/images/'+work.image" :alt="work.name"
+              <img :src="getImagePath(work.image)" :alt="work.name"
                    class="absolute top-0 left-[50%] min-w-[100%] min-h-[100%] -translate-x-[50%] group-hover:scale-[1.3] transition duration-300 ease-out">
               <div class="flex h-full absolute w-full top-0 left-0  items-center bg-black bg-opacity-80 z-2 opacity-0 group-hover:opacity-100 transition duration-300 ease-out">
                 <div class="flex flex-1 justify-center items-center p-2 flex-wrap space-x-2">

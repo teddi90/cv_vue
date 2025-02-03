@@ -22,7 +22,7 @@ onMounted(() => {
 
 <template>
   <main v-if="work">
-    <section class="pt-[50px] md:pt-[80px] lg:pt-[100px] dark:text-white pb-0">
+    <section class="pt-[50px] md:pt-[80px] lg:pt-[100px] dark:text-white pb-0 dark:bg-black">
       <div class="container mx-auto">
         <div class="flex flex-wrap md:gap-5 lg:gap-8">
           <div class="md:flex-1 mb-3 md:mb-0">

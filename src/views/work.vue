@@ -39,7 +39,7 @@ onMounted(() => {
             <div class="flex space-x-3 items-center mb-4">
               <div class="flex items-center">
                 Site:
-                <a :href="work.project_link"
+                <a :href="work.link"
                    class="cursor-pointer inline-flex hover:text-blue-500 transition ease-in duration-300">
                   <font-awesome-icon :icon="['fas', 'earth-europe']" class="h-6 w-6 ml-1"/>
                 </a>
